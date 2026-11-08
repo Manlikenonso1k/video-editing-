@@ -1,0 +1,27 @@
+{
+  "aspect": "16:9",
+  "accent": "#E8A317",
+  "bg_color": "#0F1B2D",
+  "grade": "warm",
+  "captions": true,
+  "transition": "cut",
+  "loudness": -14,
+  "caption_fixes": {"Akpo": "Akapo"},
+  "segments": [
+    {"type": "clip", "slug": "ada-obi-finance", "in": 3.2, "out": 6.1, "lower_third": false},
+    {"type": "card", "lines": ["Happy Birthday", "Mr. Akapo Emmanuel", "8 November 2026"], "big": 1, "seconds": 5, "bg": "photos/akapo-1.jpg"},
+    {"type": "card", "lines": ["The fun ones"], "seconds": 2},
+    {"type": "clip", "slug": "tunde-bakare-sales"},
+    {"type": "clip", "slug": "ada-obi-finance", "in": 0.85, "out": 14.6},
+    {"type": "photo", "file": "photos/akapo-1.jpg", "seconds": 4, "caption": "Leading from the front"},
+    {"type": "photo", "file": "photos/akapo-2.jpg", "seconds": 4, "caption": "Always the first to arrive"},
+    {"type": "card", "lines": ["From the heart"], "seconds": 2},
+    {"type": "clip", "slug": "ngozi-eze-admin"},
+    {"type": "grid", "items": [{"slug": "chioma-okafor-hr-shout"}, {"slug": "emeka-nwosu-it-shout"}], "seconds": 3.5, "text": "Happy birthday, sir!"},
+    {"type": "card", "lines": ["Happy birthday, sir!", "With love from all of us at [Company]"], "seconds": 6}
+  ],
+  "music": [
+    {"file": "music/upbeat.mp3", "start": 0, "end": 60, "volume": 0.3},
+    {"file": "music/soft-piano.mp3", "start": 60, "volume": 0.3}
+  ]
+}

@@ -1,0 +1,13 @@
+# generated
+work/
+output/
+remotion/node_modules/
+remotion/out/
+remotion/public/clips/
+
+# environments and secrets
+.venv/
+vendor/video-use/.venv/
+.env
+.DS_Store
+__pycache__/

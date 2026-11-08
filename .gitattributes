@@ -1,0 +1,13 @@
+# Media goes through Git LFS so GitHub accepts files over 100 MB (up to 2 GB each on Free).
+# Run `git lfs install` once before your first `git add`.
+raw/** filter=lfs diff=lfs merge=lfs -text
+reference/** filter=lfs diff=lfs merge=lfs -text
+photos/** filter=lfs diff=lfs merge=lfs -text
+music/** filter=lfs diff=lfs merge=lfs -text
+brand/*.ttf filter=lfs diff=lfs merge=lfs -text
+brand/*.otf filter=lfs diff=lfs merge=lfs -text
+brand/*.png filter=lfs diff=lfs merge=lfs -text
+raw/.gitkeep -filter -diff -merge text
+reference/.gitkeep -filter -diff -merge text
+photos/.gitkeep -filter -diff -merge text
+music/.gitkeep -filter -diff -merge text
