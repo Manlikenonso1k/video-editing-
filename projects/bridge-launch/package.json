@@ -1,0 +1,17 @@
+{
+  "name": "video-editing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Code-driven motion graphics: HTML/SVG + GSAP compositions rendered frame-by-frame to MP4.",
+  "type": "module",
+  "scripts": {
+    "setup-asr": "bash scripts/setup-asr.sh",
+    "prepare-recording": "python3 scripts/prepare_recording.py",
+    "render": "node scripts/render.mjs",
+    "stills": "node scripts/render.mjs --stills",
+    "build": "python3 scripts/prepare_recording.py && node scripts/render.mjs"
+  },
+  "dependencies": {
+    "gsap": "3.14.2"
+  }
+}
