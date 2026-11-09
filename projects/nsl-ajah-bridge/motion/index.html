@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>NSL Ajah: Third Mainland Bridge edit</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- gameplay footage (cover-cropped to 16:9, camera moves applied to #cam) -->
+  <div id="cam"><img id="clip" alt=""></div>
+  <div class="vignette"></div>
+  <div class="shade" id="shade"></div>
+
+  <!-- intro + title -->
+  <div class="kicker" id="kicker"></div>
+  <div class="title-sign" id="titleSign">
+    <div class="sign-inner">
+      <div class="sign-words" id="signWords"></div>
+      <div class="sign-route" id="signRoute"></div>
+    </div>
+  </div>
+
+  <!-- route tracker -->
+  <div class="tracker" id="tracker">
+    <div class="trk-line"><div class="trk-fill" id="trkFill"></div></div>
+    <div class="trk-car" id="trkCar"></div>
+  </div>
+
+  <!-- callouts -->
+  <div id="callouts"></div>
+
+  <!-- one word per beat -->
+  <div class="beatword" id="beatword"></div>
+
+  <!-- lower banner -->
+  <div class="banner" id="banner">
+    <div class="banner-title" id="bannerTitle"></div>
+    <div class="banner-sub" id="bannerSub"></div>
+  </div>
+
+  <!-- outro -->
+  <div class="gantry" id="gantry">
+    <div class="sign-inner">
+      <div class="gantry-title" id="gantryTitle"></div>
+      <div class="sign-route" id="gantryRoute"></div>
+    </div>
+  </div>
+  <div class="outro-line" id="outroLine"></div>
+  <div class="outro-cta" id="outroCta"></div>
+
+  <div class="flash" id="flash"></div>
+  <div class="fade" id="fade"></div>
+</div>
+
+<script src="../node_modules/gsap/dist/gsap.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

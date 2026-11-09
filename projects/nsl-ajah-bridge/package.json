@@ -1,0 +1,16 @@
+{
+  "name": "nsl-ajah-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Beat-synced motion graphics edit: NSL Ajah, Third Mainland Bridge.",
+  "type": "module",
+  "scripts": {
+    "prep": "python3 scripts/prep.py",
+    "render": "node scripts/render.mjs",
+    "stills": "node scripts/render.mjs --stills",
+    "build": "python3 scripts/prep.py && node scripts/render.mjs"
+  },
+  "dependencies": {
+    "gsap": "3.14.2"
+  }
+}

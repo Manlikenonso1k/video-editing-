@@ -1,0 +1,101 @@
+:root {
+  --sign: #1C9A4B;        /* the in-game Third Mainland Bridge sign green */
+  --sign-dark: #137A3A;
+  --yellow: #FFD23F;      /* road-paint yellow */
+  --ink: #0A0E14;
+  --white: #FFFFFF;
+  --display: "Inter Display", "Inter", system-ui, sans-serif;
+  --sans: "Inter", system-ui, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+body { font-family: var(--sans); color: var(--white); -webkit-font-smoothing: antialiased; }
+#stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+
+/* ---------- footage ---------- */
+#cam { position: absolute; inset: 0; transform-origin: 50% 50%; }
+#clip { position: absolute; left: -240px; top: 0; width: 2400px; height: 1080px; }
+.vignette { position: absolute; inset: 0; background: radial-gradient(90% 85% at 50% 50%, transparent 55%, rgba(0,0,0,.45) 100%); }
+.shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,8,12,.55), rgba(5,8,12,.35) 50%, rgba(5,8,12,.6)); opacity: 0; }
+.flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+.fade { position: absolute; inset: 0; background: #000; opacity: 0; }
+
+/* ---------- road-sign look ---------- */
+.title-sign, .gantry, .banner {
+  position: absolute; background: var(--sign); border-radius: 22px; padding: 10px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 8px 20px rgba(0,0,0,.35);
+}
+.sign-inner { border: 5px solid #fff; border-radius: 14px; padding: 18px 54px 22px; text-align: center; }
+.sign-words, .gantry-title {
+  font-family: var(--display); font-weight: 900; text-transform: uppercase; letter-spacing: -0.01em;
+  line-height: 1; white-space: nowrap;
+}
+.sign-words { font-size: 124px; }
+.sign-words .sw { display: inline-block; margin: 0 .12em; }
+.sign-route { margin-top: 14px; font-family: var(--display); font-weight: 700; font-size: 34px; letter-spacing: .1em; white-space: nowrap; }
+.sign-route .rc { display: inline-block; }
+
+.title-sign { top: 380px; }
+.title-sign, .gantry, .banner, .kicker, .outro-line { left: 0; right: 0; margin: 0 auto; width: max-content; }
+
+/* ---------- intro kicker ---------- */
+.kicker {
+  position: absolute; top: 262px;
+  background: var(--yellow); color: var(--ink); border-radius: 999px; padding: 14px 30px 13px;
+  font-family: var(--display); font-weight: 900; font-size: 40px; letter-spacing: .08em; white-space: nowrap;
+  box-shadow: 0 16px 40px rgba(0,0,0,.45);
+}
+
+/* ---------- route tracker ---------- */
+.tracker {
+  position: absolute; left: 560px; top: 40px; width: 800px; height: 96px; border-radius: 22px;
+  background: rgba(8, 12, 18, .66); box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.14), 0 14px 40px rgba(0,0,0,.35);
+}
+.trk-line { position: absolute; left: 110px; right: 110px; top: 34px; height: 6px; border-radius: 3px; background: rgba(255,255,255,.22); }
+.trk-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; border-radius: 3px; background: linear-gradient(90deg, #36D07A, var(--sign)); transform-origin: 0 50%; transform: scaleX(0); }
+.trk-node { position: absolute; top: 25px; width: 24px; height: 24px; margin-left: -12px; border-radius: 50%; background: #2A3240; border: 3px solid rgba(255,255,255,.5); }
+.trk-node.on { background: var(--sign); border-color: #fff; box-shadow: 0 0 0 6px rgba(28,154,75,.35); }
+.trk-label { position: absolute; top: 58px; transform: translateX(-50%); font-family: var(--display); font-weight: 800; font-size: 19px; letter-spacing: .08em; color: rgba(255,255,255,.55); white-space: nowrap; }
+.trk-label.on { color: #fff; }
+.trk-car { position: absolute; left: 110px; top: 23px; width: 28px; height: 28px; margin-left: -14px; border-radius: 50%; background: var(--yellow); border: 4px solid #fff; box-shadow: 0 0 18px rgba(255,210,63,.9); }
+
+/* ---------- callouts ---------- */
+#callouts { position: absolute; inset: 0; }
+#callouts svg { position: absolute; inset: 0; overflow: visible; }
+.co-label {
+  position: absolute; display: flex; align-items: center; gap: 14px; padding: 14px 26px 13px 18px; border-radius: 16px;
+  background: #fff; color: var(--ink); font-family: var(--display); font-weight: 900; font-size: 40px; letter-spacing: .02em; white-space: nowrap;
+  box-shadow: 0 18px 40px rgba(0,0,0,.45);
+}
+.co-label i { display: block; width: 18px; height: 18px; border-radius: 50%; background: var(--sign); box-shadow: 0 0 0 5px rgba(28,154,75,.25); }
+.co-dot { position: absolute; width: 22px; height: 22px; margin: -11px 0 0 -11px; border-radius: 50%; background: #fff; border: 5px solid var(--sign); box-shadow: 0 0 20px rgba(0,0,0,.4); }
+.co-ring { position: absolute; width: 70px; height: 70px; margin: -35px 0 0 -35px; border-radius: 50%; border: 4px solid #fff; }
+
+/* ---------- beat words ---------- */
+.beatword {
+  position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); text-align: center;
+  font-family: var(--display); font-weight: 900; font-size: 290px; line-height: 1; letter-spacing: -0.03em;
+  text-shadow: 0 12px 0 rgba(0,0,0,.25), 0 30px 80px rgba(0,0,0,.6); white-space: nowrap;
+}
+.beatword .bw { position: absolute; left: 0; right: 0; top: 0; transform: translateY(-50%); opacity: 0; }
+.beatword .bw.g { color: #3BE07F; }
+
+/* ---------- banner ---------- */
+.banner { top: 680px; }
+.banner .sign-inner { padding: 16px 46px 18px; }
+.banner-title { font-family: var(--display); font-weight: 900; font-size: 66px; line-height: 1; white-space: nowrap; }
+.banner-sub { margin-top: 10px; font-family: var(--display); font-weight: 600; font-size: 32px; opacity: .95; white-space: nowrap; }
+
+/* ---------- outro ---------- */
+.gantry { top: 230px; }
+.gantry-title { font-size: 112px; }
+.outro-line {
+  position: absolute; top: 610px;
+  background: var(--yellow); color: var(--ink); border-radius: 999px; padding: 16px 40px 15px;
+  font-family: var(--display); font-weight: 900; font-size: 58px; letter-spacing: .06em; white-space: nowrap;
+  box-shadow: 0 18px 50px rgba(0,0,0,.5);
+}
+.outro-cta {
+  position: absolute; left: 0; right: 0; top: 748px; text-align: center;
+  font-family: var(--display); font-weight: 700; font-size: 46px; text-shadow: 0 6px 30px rgba(0,0,0,.7);
+}

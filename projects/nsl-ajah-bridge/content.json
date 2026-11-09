@@ -1,0 +1,91 @@
+{
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "output": "renders/nsl-ajah-third-mainland-bridge.mp4"
+  },
+  "source": {
+    "file": "assets/nsl-ajah-raw.mp4",
+    "grade": "eq=contrast=1.06:saturation=1.18:gamma=0.98"
+  },
+  "music": {
+    "downbeatPhase": "auto"
+  },
+  "game": "NSL AJAH",
+  "intro": {
+    "kicker": "NEW IN NSL AJAH"
+  },
+  "title": {
+    "words": [
+      "THIRD",
+      "MAINLAND",
+      "BRIDGE"
+    ],
+    "route": [
+      "LAGOS ISLAND",
+      "OWORONSHOKI",
+      "MAINLAND"
+    ]
+  },
+  "callouts": [
+    {
+      "bar": 2,
+      "beat": 1,
+      "text": "OVER THE LAGOON",
+      "label": {
+        "x": 1040,
+        "y": 330
+      },
+      "target": {
+        "x": 1560,
+        "y": 610
+      }
+    },
+    {
+      "bar": 4,
+      "beat": 1,
+      "text": "LAGOS SKYLINE",
+      "label": {
+        "x": 430,
+        "y": 190
+      },
+      "target": {
+        "x": 280,
+        "y": 430
+      }
+    },
+    {
+      "bar": 6,
+      "beat": 0,
+      "text": "FLAT OUT",
+      "label": {
+        "x": 430,
+        "y": 690
+      },
+      "target": {
+        "x": 830,
+        "y": 975
+      }
+    }
+  ],
+  "beatWords": {
+    "bar": 3,
+    "words": [
+      "ISLAND",
+      "TO",
+      "MAIN",
+      "LAND"
+    ]
+  },
+  "banner": {
+    "bar": 5,
+    "title": "LAGOS' LONGEST BRIDGE",
+    "sub": "now drivable in NSL Ajah"
+  },
+  "outro": {
+    "bar": 7,
+    "line": "NOW IN NSL AJAH",
+    "cta": "Hop in and drive it."
+  }
+}
